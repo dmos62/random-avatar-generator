@@ -41,5 +41,14 @@
     "/dist",
     "/src/",
     "/example"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmos62/random-avatar-generator.git"
+  },
+  "author": "Dominykas Mostauskis",
+  "bugs": {
+    "url": "https://github.com/dmos62/random-avatar-generator/issues"
+  },
+  "homepage": "https://github.com/dmos62/random-avatar-generator#readme"
 }
