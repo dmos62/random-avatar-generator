@@ -74,8 +74,8 @@ function sfc32(a, b, c, d) {
 
 function getRandomNumberGenerator(seed) {
   const seedString = String(seed); // Making sure that the seed is a string.
-  const seed = cyrb128(seedString);
-  return sfc32(seed[0], seed[1], seed[2], seed[3]);
+  const seedHashed = cyrb128(seedString);
+  return sfc32(seedHashed[0], seedHashed[1], seedHashed[2], seedHashed[3]);
 }
 
 export function generateRandomAvatarData(complexity = 16, avatarDataSeparator = '-', seed = Math.random()) {
