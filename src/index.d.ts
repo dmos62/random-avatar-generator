@@ -16,9 +16,10 @@ type RenderFunction = (resolution: number, indexX: number, indexY: number) => st
  * Returns a randomly generated string representation code of an avatar for a given `complexity`
  * @param {number} [complexity] - A positive integer that represents the number of rows and columns to be drawn
  * @param {string} [avatarDataSeparator] - A character to be used as data separator
+ * @param {any} [seed] - A value to be used as the seed for generating the avatar data; accepts any value that the `String` constructor would accept
  * @return {string} Output example: 0-6-6te25-9d9p0-xd5g
  */
-export function generateRandomAvatarData(complexity?: number, avatarDataSeparator?: string): string;
+export function generateRandomAvatarData(complexity?: number, avatarDataSeparator?: string, seed?: any): string;
 
 /**
  * Returns a string with a valid SVG markup for a given `avatarData`
