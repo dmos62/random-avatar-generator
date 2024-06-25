@@ -1,6 +1,6 @@
 import { getRandomAvatar, getAvatarFromData, generateRandomAvatarData } from './index.js';
 
-describe('Generate random avatar Ddta', () => {
+describe('Generate random avatar Data', () => {
   it('should return a random code from default values', () => {
     const avatarCode = generateRandomAvatarData();
     expect(avatarCode.split('-').length).toEqual(18);
@@ -8,6 +8,27 @@ describe('Generate random avatar Ddta', () => {
   it('should return a random code', () => {
     const avatarCode = generateRandomAvatarData(4);
     expect(avatarCode.split('-').length).toEqual(6);
+  });
+});
+
+describe('Generate random avatar data with seed', () => {
+  it('should return the same code for the same seed', () => {
+    const seed = "apples";
+    const avatarCode1 = generateRandomAvatarData(16, '-', seed);
+    const avatarCode2 = generateRandomAvatarData(16, '-', seed);
+    expect(avatarCode1).toEqual(avatarCode2);
+  });
+  it('should return different codes for different seeds', () => {
+    const seed1 = "apples";
+    const seed2 = "oranges";
+    const avatarCode1 = generateRandomAvatarData(16, '-', seed1);
+    const avatarCode2 = generateRandomAvatarData(16, '-', seed2);
+    expect(avatarCode1).not.toEqual(avatarCode2);
+  });
+  it('should return different codes when no seed is provided', () => {
+    const avatarCode1 = generateRandomAvatarData();
+    const avatarCode2 = generateRandomAvatarData();
+    expect(avatarCode1).not.toEqual(avatarCode2);
   });
 });
 
