@@ -1,6 +1,6 @@
 {
   "name": "random-avatar-generator",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "A random avatar generator with low collision",
   "module": "./src/index.js",
   "types": "./src/index.d.ts",
