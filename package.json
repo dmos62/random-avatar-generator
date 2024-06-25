@@ -23,15 +23,6 @@
     "vector",
     "generator"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dmos62/random-avatar-generator.git"
-  },
-  "author": "Manuel Herrera",
-  "bugs": {
-    "url": "https://github.com/fractalsoftware/random-avatar-generator/issues"
-  },
-  "homepage": "https://github.com/fractalsoftware/random-avatar-generator#readme",
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.16.0",
